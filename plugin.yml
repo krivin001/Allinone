@@ -1,0 +1,311 @@
+name: AllInOne
+version: '2.0.0'
+main: dev.allinone.AllInOne
+api-version: '26.1.2'
+description: All-in-one - homes, warps, TPA, economy (Vault), GUI shop, sit/lay/crawl, scoreboard, kits and utilities.
+author: AllInOne
+softdepend: [Vault]
+
+commands:
+  sethome:
+    description: Set a home
+    usage: /sethome [name]
+    permission: allinone.home
+  home:
+    description: Teleport to a home
+    usage: /home [name]
+    permission: allinone.home
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+    permission: allinone.home
+  homes:
+    description: List your homes
+    permission: allinone.home
+  setwarp:
+    description: Create a warp
+    usage: /setwarp <name>
+    permission: allinone.warp.set
+  warp:
+    description: Teleport to a warp
+    usage: /warp <name>
+    permission: allinone.warp
+  delwarp:
+    description: Delete a warp
+    usage: /delwarp <name>
+    permission: allinone.warp.set
+  warps:
+    description: List warps
+    permission: allinone.warp
+  setspawn:
+    description: Set the spawn point
+    permission: allinone.spawn.set
+  spawn:
+    description: Teleport to spawn
+    permission: allinone.spawn
+  tpa:
+    description: Request to teleport to a player
+    usage: /tpa <player>
+    permission: allinone.tpa
+  tpahere:
+    description: Request a player to teleport to you
+    usage: /tpahere <player>
+    permission: allinone.tpa
+  tpaccept:
+    description: Accept a teleport request
+    aliases: [tpyes]
+    permission: allinone.tpa
+  tpdeny:
+    description: Deny a teleport request
+    aliases: [tpno]
+    permission: allinone.tpa
+  back:
+    description: Return to your previous location
+    permission: allinone.back
+  balance:
+    description: Show a balance
+    aliases: [bal, money]
+    permission: allinone.economy
+  pay:
+    description: Pay another player
+    usage: /pay <player> <amount>
+    permission: allinone.economy
+  baltop:
+    description: Richest players
+    permission: allinone.economy
+  eco:
+    description: Admin economy control
+    usage: /eco <give|take|set> <player> <amount>
+    permission: allinone.eco
+  kit:
+    description: Claim a kit
+    usage: /kit [name]
+    permission: allinone.kit
+  mute:
+    description: Mute a player
+    usage: /mute <player> [minutes]
+    permission: allinone.mute
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: allinone.mute
+  heal:
+    description: Restore health and hunger
+    permission: allinone.heal
+  feed:
+    description: Restore hunger
+    permission: allinone.feed
+  fly:
+    description: Toggle flight
+    permission: allinone.fly
+  gm:
+    description: Change gamemode
+    usage: /gm <s|c|a|sp> [player]
+    permission: allinone.gamemode
+  god:
+    description: Toggle god mode
+    permission: allinone.god
+  vanish:
+    description: Toggle vanish
+    aliases: [v]
+    permission: allinone.vanish
+  invsee:
+    description: View a player's inventory
+    usage: /invsee <player>
+    permission: allinone.invsee
+  enderchest:
+    description: Open an ender chest
+    aliases: [ec]
+    permission: allinone.enderchest
+  repair:
+    description: Repair the held item
+    permission: allinone.repair
+  hat:
+    description: Wear the held item
+    permission: allinone.hat
+  workbench:
+    description: Open a crafting table
+    aliases: [wb]
+    permission: allinone.workbench
+  speed:
+    description: Set walk/fly speed
+    usage: /speed <1-10>
+    permission: allinone.speed
+  day:
+    description: Set time to day
+    permission: allinone.time
+  night:
+    description: Set time to night
+    permission: allinone.time
+  sun:
+    description: Clear the weather
+    permission: allinone.weather
+  rain:
+    description: Start rain
+    permission: allinone.weather
+  broadcast:
+    description: Broadcast a message
+    aliases: [bc]
+    permission: allinone.broadcast
+  msg:
+    description: Private message
+    aliases: [m, tell, w]
+    usage: /msg <player> <message>
+    permission: allinone.msg
+  reply:
+    description: Reply to last private message
+    aliases: [r]
+    permission: allinone.msg
+  ping:
+    description: Show ping
+    permission: allinone.ping
+  near:
+    description: List nearby players
+    usage: /near [radius]
+    permission: allinone.near
+  top:
+    description: Teleport to the highest block above you
+    permission: allinone.top
+  shop:
+    description: Open the shop
+    usage: /shop [category]
+    permission: allinone.shop
+  sell:
+    description: Sell the item in your hand (or /sell all)
+    usage: /sell [hand|all]
+    permission: allinone.shop
+  sellall:
+    description: Sell everything sellable in your inventory
+    permission: allinone.shop
+  worth:
+    description: Show the sell value of your held item
+    permission: allinone.shop
+  sit:
+    description: Sit down
+    permission: allinone.sit
+  lay:
+    description: Lay down
+    permission: allinone.lay
+  crawl:
+    description: Toggle crawling
+    permission: allinone.crawl
+  scoreboard:
+    description: Toggle the sidebar scoreboard
+    aliases: [sb]
+    permission: allinone.scoreboard
+  allinone:
+    description: Plugin info and reload
+    aliases: [aio]
+
+permissions:
+  allinone.*:
+    description: Everything
+    default: op
+    children:
+      allinone.admin: true
+      allinone.eco: true
+      allinone.mute: true
+      allinone.heal: true
+      allinone.heal.others: true
+      allinone.feed: true
+      allinone.feed.others: true
+      allinone.fly: true
+      allinone.fly.others: true
+      allinone.gamemode: true
+      allinone.gamemode.others: true
+      allinone.god: true
+      allinone.vanish: true
+      allinone.vanish.see: true
+      allinone.invsee: true
+      allinone.enderchest: true
+      allinone.repair: true
+      allinone.hat: true
+      allinone.workbench: true
+      allinone.speed: true
+      allinone.time: true
+      allinone.weather: true
+      allinone.broadcast: true
+      allinone.top: true
+      allinone.warp.set: true
+      allinone.spawn.set: true
+      allinone.homes.unlimited: true
+      allinone.bypass.delay: true
+      allinone.bypass.kitcooldown: true
+  allinone.player:
+    description: Basic player commands
+    default: true
+    children:
+      allinone.home: true
+      allinone.warp: true
+      allinone.spawn: true
+      allinone.tpa: true
+      allinone.back: true
+      allinone.back.death: true
+      allinone.economy: true
+      allinone.kit: true
+      allinone.msg: true
+      allinone.ping: true
+      allinone.near: true
+      allinone.shop: true
+      allinone.sit: true
+      allinone.lay: true
+      allinone.crawl: true
+      allinone.scoreboard: true
+  allinone.admin:
+    default: op
+  allinone.eco:
+    default: op
+  allinone.mute:
+    default: op
+  allinone.heal:
+    default: op
+  allinone.heal.others:
+    default: op
+  allinone.feed:
+    default: op
+  allinone.feed.others:
+    default: op
+  allinone.fly:
+    default: op
+  allinone.fly.others:
+    default: op
+  allinone.gamemode:
+    default: op
+  allinone.gamemode.others:
+    default: op
+  allinone.god:
+    default: op
+  allinone.vanish:
+    default: op
+  allinone.vanish.see:
+    default: op
+  allinone.invsee:
+    default: op
+  allinone.enderchest:
+    default: op
+  allinone.repair:
+    default: op
+  allinone.hat:
+    default: op
+  allinone.workbench:
+    default: op
+  allinone.speed:
+    default: op
+  allinone.time:
+    default: op
+  allinone.weather:
+    default: op
+  allinone.broadcast:
+    default: op
+  allinone.top:
+    default: op
+  allinone.warp.set:
+    default: op
+  allinone.spawn.set:
+    default: op
+  allinone.homes.unlimited:
+    default: op
+  allinone.bypass.delay:
+    default: op
+  allinone.bypass.kitcooldown:
+    default: op

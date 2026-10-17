@@ -1,0 +1,129 @@
+# AllInOne 2.0 configuration.
+# All messages use MiniMessage: https://docs.advntr.dev/minimessage/format.html
+# Reload everything with /allinone reload
+
+prefix: "<dark_gray>[<gold>AIO</gold>]</dark_gray> "
+
+# ---------------------------------------------------------------- teleporting
+# Seconds to stand still before a teleport happens (0 = instant)
+teleport-delay: 3
+# Seconds before a /tpa request expires
+tpa-timeout: 60
+# Default home limit (permissions allinone.homes.<n> or allinone.homes.unlimited raise it)
+max-homes: 3
+# Respawn at /setspawn when the player has no bed or anchor
+respawn-at-spawn: true
+
+# ---------------------------------------------------------------- economy
+# Registered with Vault automatically when Vault is installed
+# (this is what lets EconomyShopGUI, ChestShop, etc. use these balances).
+economy:
+  starting-balance: 100.0
+  currency-symbol: "$"
+  currency-name-singular: "Dollar"
+  currency-name-plural: "Dollars"
+
+# ---------------------------------------------------------------- sit / lay / crawl
+sit:
+  enabled: true
+  # Right-click a bottom stair or slab with an empty hand to sit
+  right-click-stairs: true
+  # Fine-tune how high the seat is. Raise it if you sink into the floor, lower it if you float.
+  y-offset: 0.3
+
+# ---------------------------------------------------------------- ranks
+# Shown as <rank> in chat, tab and scoreboard. First matching permission wins.
+# "group.<name>" nodes work out of the box with LuckPerms.
+ranks:
+  - permission: "group.owner"
+    display: "<red><bold>OWNER</bold></red>"
+  - permission: "group.admin"
+    display: "<red>ADMIN</red>"
+  - permission: "group.mod"
+    display: "<aqua>MOD</aqua>"
+  - permission: "group.vip"
+    display: "<green>VIP</green>"
+default-rank: "<gray>Member</gray>"
+
+# ---------------------------------------------------------------- chat
+chat:
+  enabled: true
+  # Placeholders: <rank>, <player>, <message>
+  format: "<rank> <gray><player></gray><dark_gray> » </dark_gray><white><message></white>"
+
+broadcast-format: "<gold>[Broadcast]</gold> <white><message></white>"
+
+# Placeholders: <player>. Leave empty ("") to hide the message.
+join-message: "<green>+ <player> joined the game"
+first-join-message: "<light_purple>★ Welcome <player> to the server for the first time!"
+quit-message: "<red>- <player> left the game"
+
+# ---------------------------------------------------------------- scoreboard (sidebar)
+# Placeholders: <player> <displayname> <rank> <balance> <online> <max> <ping> <tps>
+#               <world> <x> <y> <z> <kills> <deaths> <kdr> <time> <date> <server>
+# Up to 15 lines. An empty "" line is a spacer. Players can hide it with /sb.
+scoreboard:
+  enabled: true
+  update-ticks: 10
+  title-frame-ticks: 6
+  server-name: "MY SERVER"
+  timezone: "Asia/Kolkata"
+  title:
+    - "<gradient:#ffaa00:#ffffff:-0.8><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:-0.4><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:0.0><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:0.4><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:0.8><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:0.4><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:0.0><bold><server></bold></gradient>"
+    - "<gradient:#ffaa00:#ffffff:-0.4><bold><server></bold></gradient>"
+  lines:
+    - "<dark_gray><date>  <gray><time>"
+    - ""
+    - "<gold>» <white>Player"
+    - "  <gray><player>"
+    - "<gold>» <white>Rank"
+    - "  <rank>"
+    - "<gold>» <white>Balance"
+    - "  <green><balance>"
+    - ""
+    - "<gold>» <white>Stats"
+    - "  <gray>K/D: <white><kills>/<deaths> <dark_gray>(<kdr>)"
+    - "  <gray>Online: <white><online>/<max>"
+    - "  <gray>Ping: <ping>  <gray>TPS: <tps>"
+    - ""
+    - "<yellow>play.myserver.net"
+
+# ---------------------------------------------------------------- tab list
+tab:
+  enabled: true
+  header:
+    - ""
+    - "<gradient:#ffaa00:#ffffff><bold><server></bold></gradient>"
+    - "<gray>Online: <white><online>/<max>"
+    - ""
+  footer:
+    - ""
+    - "<gray>Ping: <ping>   <gray>TPS: <tps>"
+    - ""
+  # Name shown in the tab list. Leave empty to keep the default.
+  name-format: "<rank> <white><player>"
+
+# ---------------------------------------------------------------- kits
+# items use MATERIAL:amount. cooldown is in seconds. permission is optional.
+kits:
+  starter:
+    cooldown: 86400
+    items:
+      - STONE_SWORD:1
+      - STONE_PICKAXE:1
+      - STONE_AXE:1
+      - COOKED_BEEF:16
+      - TORCH:32
+  tools:
+    cooldown: 3600
+    permission: allinone.kit.tools
+    items:
+      - IRON_PICKAXE:1
+      - IRON_SHOVEL:1
+      - BREAD:16

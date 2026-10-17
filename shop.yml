@@ -1,0 +1,153 @@
+# Shop prices. Each item line is:  MATERIAL  BUY_PRICE  SELL_PRICE
+# Use -1 for "can't be bought" or "can't be sold". Titles use MiniMessage.
+# Up to 14 categories, any number of items per category (pages are automatic).
+# Reload with /allinone reload
+
+main-title: "<gradient:gold:yellow><bold>Server Shop</bold></gradient>"
+
+categories:
+  blocks:
+    title: "<green>Building Blocks"
+    icon: BRICKS
+    items:
+      - "STONE 10 2"
+      - "COBBLESTONE 4 1"
+      - "DEEPSLATE 12 2"
+      - "DIRT 2 0.5"
+      - "GRASS_BLOCK 5 1"
+      - "SAND 6 1"
+      - "GRAVEL 5 1"
+      - "OAK_LOG 12 3"
+      - "SPRUCE_LOG 12 3"
+      - "BIRCH_LOG 12 3"
+      - "OAK_PLANKS 4 1"
+      - "GLASS 8 2"
+      - "BRICKS 30 8"
+      - "STONE_BRICKS 14 3"
+      - "SANDSTONE 12 3"
+      - "TERRACOTTA 20 5"
+      - "WHITE_WOOL 16 4"
+      - "NETHERRACK 3 0.5"
+      - "OBSIDIAN 120 30"
+      - "QUARTZ_BLOCK 80 20"
+      - "GLOWSTONE 60 15"
+      - "SEA_LANTERN 90 25"
+
+  ores:
+    title: "<aqua>Ores & Minerals"
+    icon: DIAMOND
+    items:
+      - "COAL 8 3"
+      - "COPPER_INGOT 20 7"
+      - "IRON_INGOT 40 15"
+      - "GOLD_INGOT 80 30"
+      - "LAPIS_LAZULI 20 6"
+      - "REDSTONE 12 4"
+      - "QUARTZ 25 8"
+      - "AMETHYST_SHARD 30 10"
+      - "DIAMOND 400 150"
+      - "EMERALD 300 100"
+      - "NETHERITE_SCRAP 1500 500"
+      - "COAL_BLOCK 72 27"
+      - "IRON_BLOCK 360 135"
+      - "GOLD_BLOCK 720 270"
+      - "DIAMOND_BLOCK 3600 1350"
+
+  farming:
+    title: "<yellow>Farming"
+    icon: WHEAT
+    items:
+      - "WHEAT 6 2"
+      - "WHEAT_SEEDS 3 1"
+      - "CARROT 6 2"
+      - "POTATO 6 2"
+      - "BEETROOT 6 2"
+      - "SUGAR_CANE 6 2"
+      - "PUMPKIN 12 4"
+      - "MELON_SLICE 3 1"
+      - "BAMBOO 4 1"
+      - "COCOA_BEANS 10 3"
+      - "NETHER_WART 12 4"
+      - "KELP 3 1"
+      - "CACTUS 8 2"
+      - "BONE_MEAL 10 3"
+      - "OAK_SAPLING 10 2"
+      - "APPLE 12 4"
+      - "HAY_BLOCK 50 18"
+
+  food:
+    title: "<red>Food"
+    icon: COOKED_BEEF
+    items:
+      - "BREAD 15 5"
+      - "COOKED_BEEF 25 8"
+      - "COOKED_PORKCHOP 25 8"
+      - "COOKED_CHICKEN 20 6"
+      - "COOKED_MUTTON 20 6"
+      - "COOKED_SALMON 20 6"
+      - "COOKED_COD 15 5"
+      - "BAKED_POTATO 10 3"
+      - "GOLDEN_CARROT 60 20"
+      - "GOLDEN_APPLE 400 100"
+      - "PUMPKIN_PIE 30 10"
+      - "CAKE 60 -1"
+
+  mobdrops:
+    title: "<dark_green>Mob Drops"
+    icon: ROTTEN_FLESH
+    items:
+      - "ROTTEN_FLESH 3 1"
+      - "BONE 8 3"
+      - "STRING 8 3"
+      - "SPIDER_EYE 10 3"
+      - "GUNPOWDER 15 5"
+      - "ENDER_PEARL 100 35"
+      - "BLAZE_ROD 80 30"
+      - "SLIME_BALL 20 7"
+      - "LEATHER 12 4"
+      - "FEATHER 5 1"
+      - "INK_SAC 8 2"
+      - "GHAST_TEAR 150 50"
+      - "PHANTOM_MEMBRANE 60 20"
+      - "PRISMARINE_SHARD 20 6"
+
+  redstone:
+    title: "<red>Redstone"
+    icon: REDSTONE
+    items:
+      - "REDSTONE 12 4"
+      - "REPEATER 30 8"
+      - "COMPARATOR 60 15"
+      - "PISTON 40 12"
+      - "STICKY_PISTON 60 18"
+      - "OBSERVER 40 12"
+      - "HOPPER 60 20"
+      - "DISPENSER 40 12"
+      - "DROPPER 30 9"
+      - "TNT 100 30"
+      - "LEVER 6 1"
+      - "REDSTONE_TORCH 15 4"
+      - "REDSTONE_LAMP 40 12"
+      - "DAYLIGHT_DETECTOR 70 20"
+      - "TARGET 50 15"
+      - "SLIME_BLOCK 150 50"
+
+  misc:
+    title: "<light_purple>Miscellaneous"
+    icon: ENDER_CHEST
+    items:
+      - "TORCH 2 0.5"
+      - "CHEST 20 5"
+      - "CRAFTING_TABLE 12 3"
+      - "FURNACE 20 5"
+      - "BUCKET 50 15"
+      - "WATER_BUCKET 55 -1"
+      - "LAVA_BUCKET 70 -1"
+      - "ARROW 4 1"
+      - "ENDER_CHEST 200 50"
+      - "ANVIL 300 -1"
+      - "ENCHANTING_TABLE 800 -1"
+      - "EXPERIENCE_BOTTLE 150 -1"
+      - "NAME_TAG 100 -1"
+      - "SADDLE 200 -1"
+      - "LEAD 25 -1"
