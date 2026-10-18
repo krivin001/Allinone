@@ -1,5 +1,0 @@
-name: AllInOne
-version: 2.0.0
-main: dev.allinone.AllInOne
-api-version: '1.21'
-softdepend: [Vault]
